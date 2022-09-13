@@ -2,3 +2,10 @@
 import "@hotwired/turbo-rails"
 import "./controllers"
 import * as bootstrap from "bootstrap"
+
+// import "./custom/slie-one-buttons"
+// import "./custom/slide-two-buttons"
+
+
+
+

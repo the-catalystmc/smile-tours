@@ -6,13 +6,13 @@
 @mixin devices ($breakpoint) { //the name of the mixin is devices
   
     @if $breakpoint == desktop {    
-    @media only screen and (min-width: 900px) {
+    @media only screen and (min-width: 950px) {
       @content;
     }
   }
  
   @if $breakpoint == mobile {
-    @media only screen and (max-width: 481px) {
+    @media only screen and (min-width: 576px) {
       @content;
     }
   }
@@ -44,9 +44,12 @@ body {
         justify-content: center;
         border-radius: 8px;
         box-shadow: -3px 4px 21px 9px rgba(31,31,31,0.75);
+        padding: 20px;
 
         @include devices(desktop) {
             width: 40%;
+            height: auto;
+
         }
 
 
@@ -56,15 +59,195 @@ body {
             text-align: center;
 
             @include devices(desktop) {
-                font-size: 60px;
+                font-size: 3rem;
             }
         }
 
         .btn1 {
-            margin-bottom: 15px;
+          margin-bottom: 15px;
         }
-     }
+        .btn2 {
+            margin-bottom: 15px;
+            background-color: green;
+            color: white;
+        }
+  }
+}
+
+.transfers {
+  display: flex;
+  flex-direction: column;
+  
+  h2 {
+    color: green;
+    padding: 50px 0 10px 0;
+    font-family: 'Tiro Devanagari Sanskrit', serif;
+    text-align: center;
+  }
+
+  button {
+    background-color: green;
+    color: white;
+    align-self: center;
+    justify-self: center;
+    margin-bottom: 50px;
+  }
+}
+
+  .image-wrapper {
+    max-width: 100%;
+    height: 65vw;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    @include devices(mobile) {
+      height: 23vw;
+    }
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  .carousel-inner {
+    padding: 1em;
+
+//     @include devices(mobile) {
+//         display: flex;
+//     } 
+
+//     .carousel-item {
+
+//         @include devices(mobile) {
+//             display: block;
+//             margin-right: 0;
+//             flex: 0 0 calc(100%/3);
+//         } 
+//     }
+
+    .card {
+        margin: 0 .5em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+
+        .card-body {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          .special {
+            font-weight: bold;
+          }
+
+          .f {
+            margin-bottom: 20px;
+          }
+
+          h4 {
+            color: red;
+          }
+
+          p {
+            padding: 0;
+            margin: 0;
+          }
+
+          .card-text {
+            text-align: center;
+          }
+        }
+    }
   }
 
   
+.carousel-control-prev-one, .carousel-control-next-one {
+  width: 6vh;
+  height: 6vh;
+  background-color: rgb(151, 206, 0);
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
 
+.carousel-control-prev-one:hover, .carousel-control-next-one:hover {
+opacity: 1;
+}
+
+
+
+// .excursion {
+//   display: flex;
+//   flex-direction: column;
+  
+//   h2 {
+//     color: green;
+//     padding: 50px 0 10px 0;
+//     font-family: 'Tiro Devanagari Sanskrit', serif;
+//     text-align: center;
+//   }
+
+//   button {
+//     background-color: green;
+//     color: white;
+//     align-self: center;
+//     justify-self: center;
+//     margin-bottom: 50px;
+//   }
+// }
+
+//   .image-wrapper {
+//     max-width: 100%;
+//     height: 65vw;
+//     display: flex;
+//     justify-content: center;
+//     align-items: flex-start;
+
+//     @include devices(mobile) {
+//       height: 23vw;
+//     }
+
+//     img {
+//       max-width: 100%;
+//       max-height: 100%;
+//     }
+//   }
+
+//   .carousel-inner-one {
+//     padding: 1em;
+
+//     @include devices(mobile) {
+//         display: flex;
+//     } 
+
+//     .carousel-item-one {
+
+//         @include devices(mobile) {
+//             display: block;
+//             margin-right: 0;
+//             flex: 0 0 calc(100%/3);
+//         } 
+//     }
+
+//     .card {
+//         margin: 0 .5em;
+//     }
+//   }
+
+  
+// .carousel-control-prev-two, .carousel-control-next-two {
+//   width: 6vh;
+//   height: 6vh;
+//   background-color: rgb(151, 206, 0);
+//   border-radius: 50%;
+//   top: 50%;
+//   transform: translateY(-50%);
+// }
+
+// .carousel-control-prev-two:hover, .carousel-control-next-two:hover {
+// opacity: 1;
+// }
