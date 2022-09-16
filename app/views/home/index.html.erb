@@ -3,10 +3,338 @@
     <div class="home-banner">
       <div class="home-ads">
         <p class="ads-title">PRIVATE AIRPORT TRANSFERS & EXCURSIONS</p>
-        <button type="button" class="btn btn1 btn-warning">--- ARRANGE A PRIVATE TRANSFER ---</button>
-        <button type="button" class="btn btn-success">--- ARRANGE AN EXCURSION ---</button>
+        <%= link_to "ARRANGE A PRIVATE TRANSFER", transfer_path, class: "btn btn1 btn-warning" %>
+        <%# <button type="button" class="btn btn1 btn-warning">ARRANGE A PRIVATE TRANSFER</button> %>
+        <%= link_to "ARRANGE AN EXCURSION", excursion_path, class: "btn btn2 btn-success" %>
+        <%# <button type="button" class="btn btn2 btn-success">ARRANGE AN EXCURSION</button> %>
       </div>
       <%# <%= image_tag("home/waterfall2.jpg", class: "img-fluid home-img") %> 
     </div>
+  </div>
+
+  <!-- Modals -->
+  <div class="modal fade" id="riu-reggae" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">RIU REGGAE RATES</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="riu-palace" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">RIU PALACE MO-BAY RATES</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="riu-mobay" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">RIU MONTEGO BAY RATES</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="royalton-negril" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">ROYALTON NEGRIL RATES</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="hilton-rosehall" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">HILTON ROSEHALL RATES</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="azul" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">AZUL BEACH RESORT</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  <div class="transfers">
+    <h2> <hr> POPULAR AIRPORT TRANSFERS <hr> </h2>
+    <div id="carousel-rate" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="3000">
+        <div class="card">
+          <div class="image-wrapper">
+            <%= image_tag("carousel-home/hotel1.jpg") %>
+          </div>
+          <div class="card-body">
+            <h4 class="card-title">RIU REGGAE</h4>
+            <p class="card-text special">LARGE GROUP RATES AVAILABLE</p>
+            <p>Reserve Now & Pay Later</p>
+            <p class="f">Flexibility Remains</p>
+            <a href="#riu-reggae" class="btn btn-primary" data-bs-toggle="modal">CLICK FOR RATES</a>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="3000">
+        <div class="card"">
+          <div class="image-wrapper">
+            <%= image_tag("carousel-home/beach1.jpg") %>
+          </div>
+          <div class="card-body">
+            <h4 class="card-title">RIU PALACE MO-BAY</h4>
+            <p class="card-text special">LARGE GROUP RATES AVAILABLE</p>
+            <p>Reserve Now & Pay Later</p>
+            <p class="f">Flexibility Remains</p>
+
+            <a href="#riu-palace" class="btn btn-primary" data-bs-toggle="modal">CLICK FOR RATES</a>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="3000">
+        <div class="card">
+          <div class="image-wrapper">
+            <%= image_tag("carousel-home/beach2.jpg") %>
+          </div>
+          <div class="card-body">
+            <h4 class="card-title">HILTON ROSEHALL</h4>
+           <p class="card-text special">LARGE GROUP RATES AVAILABLE</p>
+            <p>Reserve Now & Pay Later</p>
+            <p class="f">Flexibility Remains</p>
+
+            <a href="#hilton-rosehall" class="btn btn-primary" data-bs-toggle="modal">CLICK FOR RATES</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item" data-bs-interval="3000">
+        <div class="card">
+          <div class="image-wrapper">
+            <%= image_tag("carousel-home/hotel2.jpg") %>
+          </div>
+          <div class="card-body">
+            <h4 class="card-title">RIU MONTEGO BAY</h4>
+             <p class="card-text special">LARGE GROUP RATES AVAILABLE</p>
+            <p>Reserve Now & Pay Later</p>
+            <p class="f">Flexibility Remains</p>
+
+            <a href="#riu-mobay" class="btn btn-primary" data-bs-toggle="modal">CLICK FOR RATES</a>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="3000">
+        <div class="card">
+          <div class="image-wrapper">
+             <%= image_tag("carousel-home/manor1.jpg") %>
+          </div>
+         
+          <div class="card-body">
+            <h4 class="card-title">ROYALTON NEGRIL</h4>
+            <p class="card-text special">LARGE GROUP RATES AVAILABLE</p>
+            <p>Reserve Now & Pay Later</p>
+            <p class="f">Flexibility Remains</p>
+
+            <a href="#royalton-negril" class="btn btn-primary" data-bs-toggle="modal">CLICK FOR RATES</a>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="3000">
+        <div class="card">
+          <div class="image-wrapper">
+            <%= image_tag("carousel-home/water1.jpg") %>
+          </div>
+          <div class="card-body">
+            <h4 class="card-title">AZUL BEACH RESORT</h4>
+            <p class="card-text special">LARGE GROUP RATES AVAILABLE</p>
+            <p>Reserve Now & Pay Later</p>
+            <p class="f">Flexibility Remains</p>
+
+            <a href="#azul" class="btn btn-primary" data-bs-toggle="modal">CLICK FOR RATES</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <button class="carousel-control-prev carousel-control-prev-one" type="button" data-bs-target="#carousel-rate" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next carousel-control-prev-one" type="button" data-bs-target="#carousel-rate" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+    </div>
+
+    <%= link_to "--- ARRANGE AIRPORT TRANSFER ---", transfer_path, class: "btn btn2 btn-warning" %>
+    <%# <button type="button" class="btn btn2 btn-warning">--- ARRANGE AIRPORT TRANSFER ---</button> %>
+
+  </div>
+
+  <div class="excursion">
+    <h2> <hr> POPULAR EXCURSIONS <hr> </h2>
+    <div id="carousel-excur" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="3000">
+        <div class="card">
+          <div class="image-wrapper">
+            <%= image_tag("carousel-home/hotel1.jpg") %>
+          </div>
+          <div class="card-body">
+            <h4 class="card-title">RIU REGGAE</h4>
+            <p class="card-text special">LARGE GROUP RATES AVAILABLE</p>
+            <p>Reserve Now & Pay Later</p>
+            <p class="f">Flexibility Remains</p>
+            <a href="#riu-reggae" class="btn btn-primary" data-bs-toggle="modal">CLICK FOR RATES</a>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="3000">
+        <div class="card"">
+          <div class="image-wrapper">
+            <%= image_tag("carousel-home/beach1.jpg") %>
+          </div>
+          <div class="card-body">
+            <h4 class="card-title">RIU PALACE MO-BAY</h4>
+            <p class="card-text special">LARGE GROUP RATES AVAILABLE</p>
+            <p>Reserve Now & Pay Later</p>
+            <p class="f">Flexibility Remains</p>
+
+            <a href="#riu-palace" class="btn btn-primary" data-bs-toggle="modal">CLICK FOR RATES</a>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="3000">
+        <div class="card">
+          <div class="image-wrapper">
+            <%= image_tag("carousel-home/beach2.jpg") %>
+          </div>
+          <div class="card-body">
+            <h4 class="card-title">HILTON ROSEHALL</h4>
+           <p class="card-text special">LARGE GROUP RATES AVAILABLE</p>
+            <p>Reserve Now & Pay Later</p>
+            <p class="f">Flexibility Remains</p>
+
+            <a href="#hilton-rosehall" class="btn btn-primary" data-bs-toggle="modal">CLICK FOR RATES</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item" data-bs-interval="3000">
+        <div class="card">
+          <div class="image-wrapper">
+            <%= image_tag("carousel-home/hotel2.jpg") %>
+          </div>
+          <div class="card-body">
+            <h4 class="card-title">RIU MONTEGO BAY</h4>
+             <p class="card-text special">LARGE GROUP RATES AVAILABLE</p>
+            <p>Reserve Now & Pay Later</p>
+            <p class="f">Flexibility Remains</p>
+
+            <a href="#riu-mobay" class="btn btn-primary" data-bs-toggle="modal">CLICK FOR RATES</a>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="3000">
+        <div class="card">
+          <div class="image-wrapper">
+             <%= image_tag("carousel-home/manor1.jpg") %>
+          </div>
+         
+          <div class="card-body">
+            <h4 class="card-title">ROYALTON NEGRIL</h4>
+            <p class="card-text special">LARGE GROUP RATES AVAILABLE</p>
+            <p>Reserve Now & Pay Later</p>
+            <p class="f">Flexibility Remains</p>
+
+            <a href="#royalton-negril" class="btn btn-primary" data-bs-toggle="modal">CLICK FOR RATES</a>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="3000">
+        <div class="card">
+          <div class="image-wrapper">
+            <%= image_tag("carousel-home/water1.jpg") %>
+          </div>
+          <div class="card-body">
+            <h4 class="card-title">AZUL BEACH RESORT</h4>
+            <p class="card-text special">LARGE GROUP RATES AVAILABLE</p>
+            <p>Reserve Now & Pay Later</p>
+            <p class="f">Flexibility Remains</p>
+
+            <a href="#azul" class="btn btn-primary" data-bs-toggle="modal">CLICK FOR RATES</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <button class="carousel-control-prev carousel-control-prev-one" type="button" data-bs-target="#carousel-excur" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next carousel-control-prev-one" type="button" data-bs-target="#carousel-excur" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+    </div>
+    <%= link_to "--- ARRANGE AN EXCURSION ---", excursion_path, class: "btn btn2 btn-warning" %>
+
+    <%# <button type="button" class="btn btn2 btn-warning">--- ARRANGE AN EXCURSION ---</button> %>
   </div>
 </main>
