@@ -23,6 +23,20 @@ body {
     margin: 0;
   }
 
+footer {
+  width: 100%;
+  text-align: center;
+}
+
+.btn2 {
+  margin-bottom: 15px;
+  background-color: green;
+  color: white;
+  width: fit-content;
+  align-self: center;
+  justify-self: center;
+}
+
 .home-banner {
     font-family: 'Tiro Devanagari Sanskrit', serif;
     height: 85vh;
@@ -66,15 +80,31 @@ body {
         .btn1 {
           margin-bottom: 15px;
         }
-        .btn2 {
-            margin-bottom: 15px;
-            background-color: green;
-            color: white;
-        }
+
   }
 }
 
 .transfers {
+  display: flex;
+  flex-direction: column;
+  
+  h2 {
+    color: green;
+    padding: 50px 0 10px 0;
+    font-family: 'Tiro Devanagari Sanskrit', serif;
+    text-align: center;
+  }
+
+  button {
+    background-color: green;
+    color: white;
+    align-self: center;
+    justify-self: center;
+    margin-bottom: 50px;
+  }
+}
+
+.excursion {
   display: flex;
   flex-direction: column;
   
@@ -100,6 +130,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    border-radius: 8px;
 
     @include devices(mobile) {
       height: 23vw;

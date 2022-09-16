@@ -11,8 +11,10 @@
     <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         <a class="nav-link active" aria-current="page" href="/">HOME</a>
-        <a class="nav-link" href="/features">AIRPORT TO HOTEL TRANSFERS</a>
-        <a class="nav-link" href="#">EXCURSION TRIPS</a>
+        <%= link_to "AIRPORT TO HOTEL TRANSFERS", transfer_path, class: "nav-link" %>
+        <%# <a class="nav-link" href="/features">AIRPORT TO HOTEL TRANSFERS</a> %>
+        <%= link_to "EXCURSION TRIPS", excursion_path, class: "nav-link" %>
+        <%# <a class="nav-link" href="#">EXCURSION TRIPS</a> %>
         <a class="nav-link" href="#">TAXI RATES</a>
       </div>
     </div>
