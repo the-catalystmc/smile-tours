@@ -1,8 +1,78 @@
-<div class="mb-3">
-  <label for="formGroupExampleInput" class="form-label">Example label</label>
-  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
+<main class="transfer-main">
+  <h2 class="transfer-title"> <hr> PRIVATE AIRPORT TRANSFERS <hr></h2>
+  <div id="transfer-carousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#transfer-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#transfer-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#transfer-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+    <%= image_tag("transfer/travel.jpg", class:'d-block w-100') %>
+      <div class="carousel-caption d-none d-md-block">
+        <h5>First slide label</h5>
+        <p>Some representative placeholder content for the first slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <%= image_tag("transfer/car.jpg", class:'d-block w-100') %>
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Second slide label</h5>
+        <p>Some representative placeholder content for the second slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <%= image_tag("transfer/bottle.jpg", class:'d-block w-100') %>
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Third slide label</h5>
+        <p>Some representative placeholder content for the third slide.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#transfer-carousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#transfer-carousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
 </div>
-<div class="mb-3">
-  <label for="formGroupExampleInput2" class="form-label">Another label</label>
-  <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder">
-</div>
+
+<form class="transfer-form" action="/" method="post">
+  <h4>CHECK AVAILABILITY & COST</h4>
+  <div class="mb-3">
+    <%# <label for="airport" class="form-label">Airport</label> %>
+    <input type="text" class="form-control" id="airport" placeholder="Montego Bay or Kingston">
+  </div>
+  <div class="mb-3">
+    <%# <label for="hotel" class="form-label">Hotel</label> %>
+    <input type="text" class="form-control" id="hotel" placeholder="Hotel/Desired Destination">
+  </div>
+  <div class="mb-3">
+    <%# <label for="passengers" class="form-label">Hotel</label> %>
+    <input type="text" class="form-control" id="passengers" placeholder="Number of Passengers">
+  </div>
+  <div class="mb-3">
+    <label for="arrival" class="form-label">Arrival Date & Time</label>
+    <input type="datetime-local" class="form-control" id="arrival" placeholder="Arrival Date & Time">
+  </div>
+  <div class="mb-3">
+    <%# <label for="trip" class="form-label">Hotel</label> %>
+    <input type="text" class="form-control" id="trip" placeholder="Round Trip/OneWay">
+  </div>
+  <div class="mb-3">
+    <%# <label for="name" class="form-label">Hotel</label> %>
+    <input type="text" class="form-control" id="name" placeholder="Name">
+  </div>
+  <div class="mb-3">
+    <%# <label for="email" class="form-label">Hotel</label> %>
+    <input type="text" class="form-control" id="email" placeholder="Email">
+  </div>
+  <div class="mb-3">
+    <%# <label for="contact" class="form-label">Hotel</label> %>
+    <input type="text" class="form-control" id="contact" placeholder="Contact">
+  </div>
+   <input type="submit" value="Check Availability & Cost" id="submit" class="btn btn-warning">
+  </form>
+</main>
