@@ -1,32 +1,31 @@
-const myCarouselElement = document.querySelector('carousel-excur')
+const productContainers = [...document.querySelectorAll('.product-container')];
+const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
+const preBtn = [...document.querySelectorAll('.pre-btn')];
+
+// productContainers.forEach((item, i) => {
+//     let containerDimensions = item.getBoundingClientRect();
+//     let containerWidth = containerDimensions.width;
+
+//     nextBtn[i].addEventListener('click', () => {
+//         console.log('next')
+//         item.scrollLeft += containerWidth;
+//     })
+
+//     preBtn[i].addEventListener('click', () => {
+//         console.log('pre')
+//         item.scrollLeft -= containerWidth;
+
+//     })
+// });
 
 
-if(window.matchMedia("(min-width:576px)").matches){
-    // const carousel = new bootstrap.Carousel(myCarouselElement,
-    // {
-    //     interval: false
-    // })
-      
-    var carouselWidth = $('.carousel-inner-one')[0].scrollWidth;
-    var cardWidth = $('.carousel-item-one').width();
+// window.onload = function next(item, i) {
+//     let containerDimensions = item.getBoundingClientRect();
+//     let containerWidth = containerDimensions.width;
 
-    var scrollPosition = 0;
+//     nextBtn[i].addEventListener('click', () => {
+//         console.log('next')
+//         item.scrollLeft += containerWidth;
+//     })
+// }
 
-    $('.carousel-control-next-two').on('click', function(){
-        if(scrollPosition < (carouselWidth - (cardWidth * 4))){
-            scrollPosition = scrollPosition + cardWidth;
-            $('.carousel-inner-one').animate({scrollLeft: 
-            scrollPosition}, 600)
-        }
-    });
-
-    $('.carousel-control-prev-two').on('click', function(){
-        if(scrollPosition > 0 ){
-            scrollPosition = scrollPosition - cardWidth;
-            $('.carousel-inner-one').animate({scrollLeft: 
-            scrollPosition}, 600)
-        }
-    });
-}else {
-    $(myCarouselElement).addClass("slide");
-}
