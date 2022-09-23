@@ -2,8 +2,6 @@
     <h2 class="excursion-title"><hr>EXCURSIONS<hr></h2>
     <section class="product">
         <h2 class="product-category">Top Excursions</h2>
-        <%# <button class="pre-btn"><i class="bi bi-arrow-left"></i></button>
-        <button class="nxt-btn"><i class="bi bi-arrow-right"></i></button> %>
         <div class="product-container">
             <div class="card product-card" style="width: 18rem;">
                 <span class="discount-tag">Hot <i class="bi bi-fire"></i></span>
@@ -94,43 +92,18 @@
            </div>
         </div> 
     </section>
-    <form class="excursion-form" action="/" method="post">
     <h4>WHAT WOULD YOU LIKE TO DO?</h4>
-    <div class="mb-3">
-        <%# <label for="airport" class="form-label">Airport</label> %>
-        <textarea placeholder="What activities or attraction are you interested in?" name="activities" rows="4" cols="50" class="form-control" id="activity-list" ></textarea>
-    </div>
-    <div class="mb-3">
-        <%# <label for="hotel" class="form-label">Hotel</label> %>
-        <input type="text" class="form-control" id="persons" placeholder="How many persons in your travel group?">
-    </div>
-    <div class="mb-3">
-        <%# <label for="passengers" class="form-label">Hotel</label> %>
-        <input type="text" class="form-control" id="passengers" placeholder="Number of Passengers">
-    </div>
-    <div class="mb-3">
-        <label for="arrival" class="form-label">Desired Date & Time</label>
-        <div class="dates">
-            <input type="datetime-local" class="form-control control-a" id="arrival-a" placeholder="Arrival Date & Time">
-            <input type="datetime-local" class="form-control" id="arrival-b" placeholder="Arrival Date & Time">
-        </div>
-    </div>
-    <div class="mb-3">
-        <%# <label for="trip" class="form-label">Hotel</label> %>
-        <input type="text" class="form-control" id="trip" placeholder="Where are you staying?">
-    </div>
-    <div class="mb-3">
-        <%# <label for="name" class="form-label">Hotel</label> %>
-        <input type="text" class="form-control" id="name-a" placeholder="Name">
-    </div>
-    <div class="mb-3">
-        <%# <label for="email" class="form-label">Hotel</label> %>
-        <input type="text" class="form-control" id="email-a" placeholder="Email">
-    </div>
-    <div class="mb-3">
-        <%# <label for="contact" class="form-label">Hotel</label> %>
-        <input type="text" class="form-control" id="contact-a" placeholder="Contact">
-    </div>
-    <input type="submit" value="Check Availability & Cost" id="submita" class="btn btn-warning">
+    <form class="excursion-form" action="/" method="post">
+        <textarea placeholder="What activities or attraction are you interested in?" name="activities" rows="4" cols="50" class="form-control mb-3 div" id="activity-list" ></textarea>
+        <input name="travel-group-number" type="text" class="form-control mb-3 div" id="persons" placeholder="How many persons in your travel group?">
+        <input name="number-of-passengers" type="text" class="form-control mb-3 div" id="passengers" placeholder="Number of Passengers">
+        <label for="arrival" class="mb-3 div">Desired Date & Time</label>
+        <input name="desired-date-1" type="datetime-local" class="form-control mb-3 div control-a" id="arrival-a" placeholder="Arrival Date & Time">
+        <input name="desired-date-2" type="datetime-local" class="form-control mb-3 div" id="arrival-b" placeholder="Arrival Date & Time">
+        <input name="current-hotel" type="text" class="form-control mb-3 div" id="trip" placeholder="Where are you staying?">
+        <input name="Name" type="text" class="form-control mb-3 div" id="name-a" placeholder="Name">
+        <input name="Email" type="text" class="form-control mb-3 div" id="email-a" placeholder="Email">
+        <input name="Contact" type="text" class="form-control mb-3 div" id="contact-a" placeholder="Contact">
+        <input type="submit" value="Check Availability & Cost" id="submita" class="btn btn-warning">
     </form>
 </main>
