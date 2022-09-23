@@ -37,41 +37,24 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
-
-<form class="transfer-form" action="/" method="post">
   <h4>CHECK AVAILABILITY & COST</h4>
-  <div class="mb-3">
-    <%# <label for="airport" class="form-label">Airport</label> %>
-    <input type="text" class="form-control" id="airport" placeholder="Montego Bay or Kingston">
-  </div>
-  <div class="mb-3">
-    <%# <label for="hotel" class="form-label">Hotel</label> %>
-    <input type="text" class="form-control" id="hotel" placeholder="Hotel/Desired Destination">
-  </div>
-  <div class="mb-3">
-    <%# <label for="passengers" class="form-label">Hotel</label> %>
-    <input type="text" class="form-control" id="passengers" placeholder="Number of Passengers">
-  </div>
-  <div class="mb-3">
+<form class="transfer-form" action="https://formsubmit.co/smarttravel876@gmail.com" method="POST">
+    <%# <input name="airport" type="text" class="form-control div mb-3" id="airport" placeholder="Montego Bay or Kingston"> %>
+    <select name="airport" id="airport" class="form-control div mb-3" id="trip">
+      <option>Montego Bay</option>
+      <option>Kingston</option>
+    </select>
+    <input name="hotel-destination" type="text" class="form-control div mb-3" id="hotel" placeholder="Hotel/Desired Destination">
+    <input name="number-of-passengers" type="text" class="form-control div mb-3" id="passengers" placeholder="Number of Passengers">
     <label for="arrival" class="form-label">Arrival Date & Time</label>
-    <input type="datetime-local" class="form-control" id="arrival" placeholder="Arrival Date & Time">
-  </div>
-  <div class="mb-3">
-    <%# <label for="trip" class="form-label">Hotel</label> %>
-    <input type="text" class="form-control" id="trip" placeholder="Round Trip/OneWay">
-  </div>
-  <div class="mb-3">
-    <%# <label for="name" class="form-label">Hotel</label> %>
-    <input type="text" class="form-control" id="name" placeholder="Name">
-  </div>
-  <div class="mb-3">
-    <%# <label for="email" class="form-label">Hotel</label> %>
-    <input type="text" class="form-control" id="email" placeholder="Email">
-  </div>
-  <div class="mb-3">
-    <%# <label for="contact" class="form-label">Hotel</label> %>
-    <input type="text" class="form-control" id="contact" placeholder="Contact">
-  </div>
+    <input name="date-time-of-arrival" type="text" class="form-control div mb-3" id="arrival" placeholder="Arrival Date & Time">
+    <select name="trip-type" class="form-control div mb-3" id="trip">
+      <option>Round Trip</option>
+      <option>One Way</option>
+    </select>
+    <input name="name" type="text" class="form-control div mb-3" id="name" placeholder="Name">
+    <input name="email" type="email" class="form-control div mb-3" id="email" placeholder="Email">
+    <input name="contact" type="text" class="form-control div mb-3" id="contact" placeholder="Contact">
    <input type="submit" value="Check Availability & Cost" id="submit" class="btn btn-warning">
   </form>
 </main>
