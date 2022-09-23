@@ -176,6 +176,11 @@ footer {
         justify-content: center;
         border: none;
 
+        .card-title {
+          width: 100%;
+          text-align: center;
+        }
+
 
         .card-body {
           display: flex;
@@ -296,6 +301,19 @@ opacity: 1;
 // }
 
 .transfer-main {
+  display: flex;
+  flex-direction: column;
+
+  h4 {
+    align-self: center;
+    color: green;
+    width: 70%;
+
+    @include devices(mobileA) {
+      width: 90%;
+      text-align: center;
+    }
+  }
 
   .transfer-title {
     color: green;
@@ -310,11 +328,7 @@ opacity: 1;
     align-items: center;
     justify-content: center;
 
-    h4 {
-      color: green;
-    }
-
-    div {
+    .div {
       align-self: center;
       justify-self: center;
       width: 70%;
@@ -324,6 +338,8 @@ opacity: 1;
 
     label {
       padding: 2px 4px;
+      align-self: center;
+      width: 70%;
     }
 
     input {
