@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+   <!--  <a class="navbar-brand" href="#">Navbar</a> -->
+    <a class="navbar-brand" href="/">
+      <div class="logo">
+        <%= image_tag("home/JamaicaST.3.png", class:'d-inline-block align-text-top logo', alt:'Jamaica Smart Travel Logo') %>
+      </div>      
+
+      <%# <img src="/docs/5.2/assets/brand/bootstrap-logo.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top"> %>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" href="/">HOME</a>
+        <%= link_to "AIRPORT TO HOTEL TRANSFERS", transfer_path, class: "nav-link" %>
+        <%= link_to "TOURS / EXCURSIONS", excursion_path, class: "nav-link" %>
+        <%# <a class="nav-link" href="#">EXCURSION TRIPS</a> %>
+        <%# <%= link_to "TAXI RATES", taxi_path, class: "nav-link" %>
+        <%= link_to "CONTACT US", contact_path, class: "nav-link" %>
+      </div>
+    </div>
+  </div>
+</nav>

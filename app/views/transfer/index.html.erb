@@ -1,0 +1,60 @@
+<main class="transfer-main">
+  <h2 class="transfer-title"> <hr> PRIVATE AIRPORT TRANSFERS <hr></h2>
+  <div id="transfer-carousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#transfer-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#transfer-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#transfer-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+    <%= image_tag("transfer/travel.jpg", class:'d-block w-100') %>
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Pickup From Your Airport</h5>
+        <p>We offer private pickups and transfers from your airport directly to your hotel.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <%= image_tag("transfer/car.jpg", class:'d-block w-100') %>
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Travel In Comfort & Style</h5>
+        <p>We offer comfortable and spacious vans and buses to make your transportation a smooth one.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <%= image_tag("transfer/bottle.jpg", class:'d-block w-100') %>
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Complimentary Refreshments</h5>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#transfer-carousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#transfer-carousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+  <h4>CHECK AVAILABILITY & COST</h4>
+<form class="transfer-form" action="https://formsubmit.co/smarttravel876@gmail.com" method="POST">
+    <%# <input name="airport" type="text" class="form-control div mb-3" id="airport" placeholder="Montego Bay or Kingston"> %>
+    <select name="airport" id="airport" class="form-control div mb-3" id="trip">
+      <option>Montego Bay</option>
+      <option>Kingston</option>
+    </select>
+    <input name="hotel-destination" type="text" class="form-control div mb-3" id="hotel" placeholder="Hotel/Desired Destination">
+    <input name="number-of-passengers" type="text" class="form-control div mb-3" id="passengers" placeholder="Number of Passengers">
+    <label for="arrival" class="form-label">Arrival Date & Time</label>
+    <input name="date-time-of-arrival" type="text" class="form-control div mb-3" id="arrival" placeholder="Arrival Date & Time">
+    <select name="trip-type" class="form-control div mb-3" id="trip">
+      <option>Round Trip</option>
+      <option>One Way</option>
+    </select>
+    <input name="name" type="text" class="form-control div mb-3" id="name" placeholder="Name">
+    <input name="email" type="email" class="form-control div mb-3" id="email" placeholder="Email">
+    <input name="contact" type="text" class="form-control div mb-3" id="contact" placeholder="Contact">
+   <input type="submit" value="Check Availability & Cost" id="submit" class="btn btn-warning">
+  </form>
+</main>
