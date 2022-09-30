@@ -357,6 +357,11 @@ opacity: 1;
 
 .excursion-main {
 
+  h4 {
+    color: green;
+    text-align: center;
+  }
+
   .excursion-title {
     color: green;
     padding: 20px 0 10px 0;
@@ -609,5 +614,30 @@ opacity: 1;
   color: red;
   text-transform: uppercase;
   font-weight: 500;
+}
+
+.contact-us {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+
+    h2 {
+      color: green;
+      padding: 20px 0 10px 0;
+      font-family: 'Tiro Devanagari Sanskrit', serif;
+      text-align: center;
+    }
+
+    .phone1 {
+      text-align: center;
+    }
+
+    .phone2 {
+      text-align: center;
+    }
+
+    .email1 {
+      text-align: center;
+    }
 }
 
